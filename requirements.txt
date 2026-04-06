@@ -1,0 +1,6 @@
+streamlit
+tavily-python
+google-generativeai
+streamlit-drawable-canvas
+Pillow
+pypdf
