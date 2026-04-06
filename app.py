@@ -105,7 +105,7 @@ else:
     # --- API CONFIG ---
     tavily = TavilyClient(api_key=st.secrets["TAVILY_KEY"])
     genai.configure(api_key=st.secrets["GEMINI_KEY"]) # <-- PASTE KEY HERE
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
     with st.sidebar:
         st.title(f"Hi, {st.session_state.user}! 🌟")
