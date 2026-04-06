@@ -103,8 +103,8 @@ if not st.session_state.auth:
 # --- 5. THE FRIENDLY MENTOR WORKSPACE ---
 else:
     # --- API CONFIG ---
-    tavily = TavilyClient(api_key=st.secrets["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"])
-    genai.configure(api_key=st.secrets["AIzaSyD054arrp9tt1fk7JdqAa5fVBcktDBB2hI"]) # <-- PASTE KEY HERE
+    tavily = TavilyClient(api_key=st.secrets["TAVILY_KEY"])
+    genai.configure(api_key=st.secrets["GEMINI_KEY"]) # <-- PASTE KEY HERE
     model = genai.GenerativeModel('gemini-2.5-flash')
 
     with st.sidebar:
