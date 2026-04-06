@@ -1,6 +1,6 @@
 streamlit
 tavily-python
-google-generativeai
+google-generativeai>=0.8.0
 streamlit-drawable-canvas
 Pillow
 pypdf
