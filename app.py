@@ -14,7 +14,7 @@ db.execute('CREATE TABLE IF NOT EXISTS history (username TEXT, query TEXT, times
 conn.commit()
 
 # --- 2. UI/UX STYLING & WEBSITE NAME ---
-st.set_page_config(page_title="Ajay's AI Portfolio", layout="wide") # <-- YOU CAN CHANGE THE TAB NAME HERE
+st.set_page_config(page_title="Ajay's AI Portfolio", layout="wide") 
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
@@ -25,6 +25,12 @@ st.markdown("""
         font-family: 'Nunito', sans-serif; 
     }
     
+    /* 👇 ADD THESE 3 LINES TO HIDE STREAMLIT BRANDING 👇 */
+    [data-testid="stHeader"] { visibility: hidden; }
+    footer { visibility: hidden; }
+    #MainMenu { visibility: hidden; }
+    /* 👆 ------------------------------------------- 👆 */
+
     h1, h2, h3 { color: #89b4fa !important; font-weight: 800; }
     
     /* Friendly Sidebar */
