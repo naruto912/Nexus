@@ -127,7 +127,11 @@ if query:
                 """)
                 
                 response = model.generate_content(payload)
-                full_text = response.text
+                
+                try:
+                    full_text = response.text
+                except ValueError:
+                    full_text = "Whoops! 🛑 Google's safety filters blocked my response, or I got a little confused. Could you try asking that in a slightly different way?\n--- HELPFUL TIPS ---\nMake sure your prompt or uploaded file doesn't trigger any safety guidelines!\n--- NEXT STEPS ---\nTry asking another coding question!"
 
                 # 4. Display
                 if "--- HELPFUL TIPS ---" in full_text and "--- NEXT STEPS ---" in full_text:
